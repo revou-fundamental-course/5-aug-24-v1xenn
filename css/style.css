@@ -1,3 +1,5 @@
+/* ini css */
+
 .main-title{
     text-align: center;
 }
@@ -23,7 +25,7 @@ aside {
 
 .form-btn-container {
     margin-top: 24px;
-    margin bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .bg-aliceblue {
@@ -50,3 +52,4 @@ input[type=number] {
 footer{
     text-align: center;
 }
+
