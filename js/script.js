@@ -1,7 +1,5 @@
 // ini javascript
 
-console.log('linked success');
-
 function formValidate() {
     let inputWeight = document.getElementById('input-weight').value;
     let inputHeight = document.getElementById('input-height').value;
