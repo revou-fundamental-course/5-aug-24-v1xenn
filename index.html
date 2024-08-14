@@ -15,7 +15,7 @@
     <main>
         <aside>
             <article>
-            <p>Kamu mau tahu apakah tubuhmu ideal atau tidak? hayuk cari tahu ukurannya dengan menggunakan kalkulator BMI</p>
+            <p>Body Mass Index (BMI) adalah metode perhitungan yang dapat memberikan informasi dasar terhadap masalah berat badan Anda secara keseluruhan seperti keidealan berat badan. Ingin tahu hasil berat badanmu? Gunakan kalkulator BMI ini untuk mengetahui apa berat badan Anda</p>
         </article>
 
         <form>
@@ -27,11 +27,11 @@
             
             <div>
                 <h3>Berat Badan</h3>
-                <input type="number">
+                <input type="number" id="input-weight">
             </div>
             <div>
                 <h3>Tinggi Badan</h3>
-                <input type="number">
+                <input type="number" id="input-height">
             </div>
             <div>
                 <h3>Usia</h3>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="form-btn-container">
-                <button class="button bg-aliceblue">Perhitungan BMI</button>
+                <button class="button bg-aliceblue" type="button" onclick="formValidate()">Perhitungan BMI</button>
                 <button class="button bg-reset">Reset</button>
             </div>
         </form>
@@ -49,21 +49,22 @@
                 <h2>Informasi dan Keterangan</h2>
             </header>
 
-            <p>Fungsi BMI yaitu Membantu menjaga rasio lemak tubuh yang berkaitan dengan tinggi badan,
-                Memberikan peringatan mengenai peluang adanya risiko penyakit yang bisa menyerang tubuh,
-                Memberi pertimbangan untuk mengambil keputusan terkait dengan kondisi kesehatan,
-                Bisa mengetahui rentang berat badan yang sehat dan ideal,
-                Dapat mencari solusi untuk berat badan dengan lebih mudah.</p>
+            <p>Berikut ini merupakan fungsi melakukan pengukuran BMI : </p>
+            <p>1. Membantu menjaga rasio lemak tubuh yang berkaitan dengan tinggi badan.</p>
+            <p>2. Memberikan peringatan mengenai peluang adanya risiko penyakit yang bisa menyerang tubuh.</p>
+            <p>3. Memberi pertimbangan untuk mengambil keputusan terkait dengan kondisi kesehatan.</p>
+            <p>4. Bisa mengetahui rentang berat badan yang sehat dan ideal.</p>
+            <p>5. Dapat mencari solusi untuk berat badan dengan lebih mudah.</p>
             </article>
         </aside>
 
         <aside>
             <section>
-                <p>Fungsi BMI yaitu Membantu menjaga rasio lemak tubuh yang berkaitan dengan tinggi badan,
-                    Memberikan peringatan mengenai peluang adanya risiko penyakit yang bisa menyerang tubuh,
-                    Memberi pertimbangan untuk mengambil keputusan terkait dengan kondisi kesehatan,
-                    Bisa mengetahui rentang berat badan yang sehat dan ideal,
-                    Dapat mencari solusi untuk berat badan dengan lebih mudah.</p>
+                <p>Menurut WHO, kategori standar berat badan ideal pria dan wanita dewasa berdasarkan BMI adalah sebagai berikut:
+                <p>- Kurang dari 18,5 berarti underweight.</p>
+                <p>- Antara 18,5 - 24,9 berarti berat badan normal.</p>
+                <p>- Antara 25-29,9 berarti berat badan berlebih (overweight).</p>
+                <p>- Di atas 30 berarti obesitas.</p>
             </section>
         </aside>
     </main>
@@ -71,5 +72,7 @@
     <footer>
         <p>Made by Nay</p>
     </footer>
+    
+    <script src="js\script.js"></script>
 </body>
 </html>
