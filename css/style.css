@@ -1,60 +1,326 @@
-/* ini css */
-
-.main-title{
-    text-align: center;
-}
-
-main {
-    display:flex;
-}
-
-form {
-    padding: 12px;
-    background-color: lightblue;
-}
-
-aside {
-    padding: 48px;
-}
-
-.button {
-    height: 32px;
-    border: none;
-    border-radius: 4px;
-}
-
-.form-btn-container {
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-
-.bg-aliceblue {
-    background-color: aliceblue; 
-}
-
-.bg-reset {
-    background-color: aquamarine;
-    color: black;
-}
-
-input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* mengimport font dari Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    *{
+    margin: 12px;
+    padding: 0px;
     box-sizing: border-box;
-    font-family: monospace;
-    font-size: 14px;
-}
+    font-family: 'Poppins', sans-serif;
+    }
 
-footer{
+    /* mengatur layout */
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(161, 203, 250);
+    }
+
+   /* mengatur kotak */
+  .box {
+    border-radius: 12px;
+  }
+
+  h1 {
+    color: rgba(28, 32, 121, 0.7);
+    font-weight: bold;
+    font-size: 46px;
+    padding: 24px;
     text-align: center;
+    
+  }
+  /* mengatur paragraf */
+  p {
+    padding: 0px 0px 12px 0px;
+  }
+    .content {
+        padding: 30px;
+        
+    }
+    
+    .input {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    
+    .input label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+    .input input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .inputW {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+
+    .inputW label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+   .inputW input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .inputH {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+
+    .inputH label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+   .inputH input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
+    }
+
+/* mengatur tampilan tombol hasil BMI */ 
+button.calculate {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(97,138,254,1);
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s;
+  }
+  button.calculate:hover {
+    background: #0044ff;
+  }
+/* mengatur tampilan tombol reset */
+  button.bg-reset {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(201, 9, 28);
+    font-size: 16px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.5s; 
+  }
+
+/* membuat tampilan result */
+.result {
+    padding: 10px 20px;
+  }
+  .result p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .result #result {
+    font-size: 36px;
+    font-weight: 900;
+    color: #4f7df9;
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+  }
+  /* membuat tampilan komen */
+  #comment {
+    color: #4f7df9;
+    font-weight: 800;
+  }
+
+.comment {
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
 }
 
-@media only screen and (max-width: 480px){
-    main {
-        flex-direction: column;
+/* membuat tampilan footer */
+.footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 15px
+}
+
+.footer-text {
+    text-decoration: none;
+    color: rgba(40, 40, 40, 0.8);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    transition: all 0.5;
+}
+
+.footer-text:hover {
+    color: rgba(40, 40, 40, 1);
+}
+
+/* styling jenis kelamin */
+.gender {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+  /* membuat tampilan radio */
+.gender .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* menyembunyikan default radio browser */
+  .gender .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* kustom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* nambah warna abu-abu */
+  .gender .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Saat tombol dicentang, jadi biru */
+  .gender .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* membuat indikator bulat (sebelum dipencet) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* menampilkan indikator bulat */
+  .gender .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* membuat tampilan indikator bulat */
+  .gender .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+.containerHW {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+
+/* membuat background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 300px;
+
+}
+
+/* membuat website lebih responsif */
+@media (max-width: 700px){
+    .box {
+        width: 380px;
+    }  
+    .input label {
+
+        font-size: 18px;
+    }
+
+    .inputH label, .inputW label {
+        font-size: 14px;
+    }
+    .input input, .inputH input, .inputW input{
+        font-size: 24px;
+    }
+    .modal-content {
+
+      width: 380px;
     }
 }
